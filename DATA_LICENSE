@@ -1,0 +1,29 @@
+R-BIAS benchmark data and documentation license
+
+Subject to the author-review items below, original benchmark scenarios, prompt files, schemas, and documentation in the following paths are made available under the Creative Commons Attribution 4.0 International license (CC BY 4.0):
+
+- data/scenarios/
+- data/prompts/
+- data/schemas/
+- data/samples/
+- docs/
+- BENCHMARK_CARD.md
+- RESPONSIBLE_USE.md
+
+License identifier: CC-BY-4.0
+License text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+Attribution should identify the R-BIAS authors, the artifact title, the software or data release version, and a link to the released repository when those details are available. The final attribution wording is TODO pending author and repository metadata.
+
+This license mapping does not relicense:
+
+- third-party datasets or excerpts;
+- model weights or tokenizer files;
+- model outputs, which remain governed by applicable provider terms;
+- private annotations or personally identifying information;
+- third-party software dependencies;
+- aggregate artifacts whose release has not been authorized.
+
+TODO before public release: the repository owner must confirm authorship, redistribution rights for model-assisted scenario drafts, third-party inputs, and the final attribution statement. This file records the intended split and is not a substitute for legal review.
+
