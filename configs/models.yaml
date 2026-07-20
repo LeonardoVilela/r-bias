@@ -1,0 +1,39 @@
+# Model versions are recorded from provider responses at generation time.
+# Do not infer a version from an alias.
+models:
+  claude-haiku-4-5:
+    provider: anthropic
+    environment_variable: ANTHROPIC_API_KEY
+  gpt-4.1:
+    provider: openai
+    environment_variable: OPENAI_API_KEY
+  gemini-3.1-flash-lite-preview:
+    provider: google
+    environment_variable: GEMINI_API_KEY
+  sabia-4:
+    provider: maritaca
+    environment_variable: MARITACA_API_KEY
+    base_url: https://chat.maritaca.ai/api
+  qwen3-8b:
+    provider: local
+    model_id: Qwen/Qwen3-8B
+    tensor_parallel_size: 1
+  qwen3-32b:
+    provider: local
+    model_id: Qwen/Qwen3-32B
+    tensor_parallel_size: 4
+  llama-4-scout:
+    provider: local
+    model_id: meta-llama/Llama-4-Scout-17B-16E-Instruct
+    tensor_parallel_size: 4
+    quantization: bitsandbytes
+  llama-4-maverick:
+    provider: local
+    model_id: meta-llama/Llama-4-Maverick-17B-128E-Instruct
+    tensor_parallel_size: 8
+    quantization: bitsandbytes
+  openai/gpt-oss-20b:
+    provider: local
+    model_id: openai/gpt-oss-20b
+    tensor_parallel_size: 2
+

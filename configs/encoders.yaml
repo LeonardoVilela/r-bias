@@ -1,0 +1,26 @@
+auxiliary_encoders:
+  bge:
+    model_id: BAAI/bge-large-en-v1.5
+    pooling: mean
+    normalize: true
+  e5:
+    model_id: intfloat/multilingual-e5-large-instruct
+    pooling: mean
+    prefix: "query: "
+    normalize: true
+  llama:
+    model_id: meta-llama/Llama-3.2-1B-Instruct
+    pooling: mean
+    normalize: true
+
+# These are intrinsic evaluation targets, not auxiliary response encoders.
+intrinsic_targets:
+  bertimbau:
+    model_id: neuralmind/bert-large-portuguese-cased
+    pooling: mean
+  ptt5:
+    model_id: unicamp-dl/ptt5-v2-base
+    fallback_model_id: unicamp-dl/ptt5-base-portuguese-vocab
+    stack: encoder
+    pooling: mean
+
