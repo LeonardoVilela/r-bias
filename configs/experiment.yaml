@@ -1,0 +1,42 @@
+experiment:
+  name: rbias-default
+  scenarios: ../data/scenarios/rbias_scenarios.json
+  models: models.yaml
+  encoders: encoders.yaml
+  expected_scenarios: 263
+  expected_prompt_variants: 1315
+  expected_strict_scenarios: 203
+  expected_implicit_scenarios: 60
+
+generation:
+  n_samples: 5
+  temperature: 0.7
+  top_p: 1.0
+  max_tokens: 512
+  concurrency: 5
+  max_retries: 6
+
+permutation:
+  n_permutations: 10000
+  seed: 42
+
+sentiment:
+  primary: cardiffnlp/twitter-xlm-roberta-base-sentiment
+  fallback: pysentimiento/bertweet-pt-sentiment
+
+refusal_lexicon:
+  - "não posso"
+  - "não é apropriado"
+  - "não vou opinar"
+  - "não me é possível"
+  - "lamento, mas"
+  - "não tenho condições de"
+  - "não é adequado"
+  - "impossível responder"
+  - "não consigo responder"
+  - "não devo"
+  - "foge ao meu escopo"
+  - "i cannot"
+  - "i'm not able"
+  - "i am not able"
+  - "i must decline"

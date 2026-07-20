@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/rbias/scenario.schema.json",
+  "title": "R-BIAS grouped source scenario",
+  "type": "object",
+  "required": ["scenario_id", "categoria", "dimensao_vies", "versoes"],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "categoria": {
+      "enum": [
+        "associacao_ocupacao",
+        "contrafactual_pares",
+        "estereotipo_implicito",
+        "historico_e_merito",
+        "saude_e_cuidado",
+        "sentimento_e_percepcao",
+        "tomada_de_decisao",
+        "violencia_e_criminalidade"
+      ]
+    },
+    "dimensao_vies": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lote": {
+      "type": ["integer", "string", "null"]
+    },
+    "versoes": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["grupo_racial_alvo", "frase"],
+        "properties": {
+          "grupo_racial_alvo": {
+            "enum": [
+              "negro/preto",
+              "branco",
+              "pardo",
+              "indigena",
+              "asiatico/amarelo"
+            ]
+          },
+          "frase": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

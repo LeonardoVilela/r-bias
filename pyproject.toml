@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rbias"
+version = "0.1.0.dev0"
+description = "Brazilian Portuguese evaluation of race-conditioned semantic disparity in language-model outputs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+api = [
+  "anthropic>=0.28",
+  "google-genai>=0.7",
+  "openai>=1.30",
+]
+encoders = [
+  "sentencepiece>=0.2",
+  "torch>=2.2",
+  "transformers>=4.40",
+]
+local = [
+  "accelerate>=0.27",
+  "bitsandbytes>=0.43",
+  "vllm>=0.9.0",
+]
+dev = [
+  "mypy>=1.10",
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+rbias = "rbias.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_ignores = true
+no_implicit_optional = true
+ignore_missing_imports = true
