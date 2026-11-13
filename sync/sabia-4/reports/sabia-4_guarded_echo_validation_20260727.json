@@ -1,0 +1,95 @@
+{
+  "date": "2026-07-27",
+  "model": "sabia-4",
+  "regime": "strict",
+  "strict_responses": 5075,
+  "read_only": true,
+  "pardo_object_audit": {
+    "pardo_spans": 918,
+    "grep_proximity_alarms": 2,
+    "confirmed_object_uses": 0,
+    "classification": "The two proximity alarms use papel in the sense of role/function and are non-problematic."
+  },
+  "method_note": {
+    "local_person_word_contains_medico": false,
+    "sagemaker_person_word_contains_medico": true,
+    "action": "No lexicon change was made. The local lexicon remains stricter in medical contexts."
+  },
+  "item_2c": {
+    "negro": {
+      "old_spans": 1574,
+      "guarded_spans": 1574,
+      "difference": 0
+    },
+    "caucasiano": {
+      "old_spans": 7,
+      "guarded_spans": 7,
+      "difference": 0
+    },
+    "pardo": {
+      "old_spans": 918,
+      "guarded_spans": 918,
+      "difference": 0
+    }
+  },
+  "item_3": {
+    "overall": {
+      "n": 5075,
+      "any_marker_count": 3202,
+      "any_marker_rate_pct": 63.0935960591133,
+      "prompted_group_count": 3168,
+      "prompted_group_rate_pct": 62.423645320197046
+    },
+    "by_prompt_group": {
+      "asiatico/amarelo": {
+        "n": 1015,
+        "any_marker_count": 674,
+        "any_marker_rate_pct": 66.4039408866995,
+        "prompted_group_count": 670,
+        "prompted_group_rate_pct": 66.00985221674877
+      },
+      "branco": {
+        "n": 1015,
+        "any_marker_count": 299,
+        "any_marker_rate_pct": 29.458128078817733,
+        "prompted_group_count": 278,
+        "prompted_group_rate_pct": 27.389162561576356
+      },
+      "indigena": {
+        "n": 1015,
+        "any_marker_count": 873,
+        "any_marker_rate_pct": 86.00985221674877,
+        "prompted_group_count": 872,
+        "prompted_group_rate_pct": 85.91133004926108
+      },
+      "negro/preto": {
+        "n": 1015,
+        "any_marker_count": 729,
+        "any_marker_rate_pct": 71.82266009852216,
+        "prompted_group_count": 728,
+        "prompted_group_rate_pct": 71.72413793103448
+      },
+      "pardo": {
+        "n": 1015,
+        "any_marker_count": 627,
+        "any_marker_rate_pct": 61.77339901477833,
+        "prompted_group_count": 620,
+        "prompted_group_rate_pct": 61.083743842364534
+      }
+    },
+    "detected_spans_by_group": {
+      "asiatico/amarelo": 1185,
+      "branco": 625,
+      "indigena": 2025,
+      "negro/preto": 1679,
+      "pardo": 920
+    }
+  },
+  "not_run": [
+    "masking",
+    "deletion",
+    "embedding extraction",
+    "score calculation",
+    "permutation test"
+  ]
+}

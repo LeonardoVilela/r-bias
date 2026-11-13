@@ -1,0 +1,385 @@
+{
+  "computed_at": "2026-07-27T16:31:36.577256+00:00",
+  "model": "sabia-4",
+  "precision": "fp32",
+  "device": "NVIDIA GeForce RTX 4060",
+  "permutations": 10000,
+  "permutation_seed": 42,
+  "ratio_denominator": "(null_ci_95[0] + null_ci_95[1]) / 2",
+  "analytic_null_function_exists": true,
+  "analytic_null_used_for_reported_ratio": false,
+  "comparisons": [
+    {
+      "variant": "mask",
+      "encoder": "bge",
+      "score_original": 0.021059468388557434,
+      "score_guarded": 0.01835527829825878,
+      "drop_percent": 12.840732920722548,
+      "null_ci_low": 0.014419438363984228,
+      "null_ci_high": 0.014975279150530697,
+      "null_floor_midpoint": 0.014697358757257462,
+      "ratio_guarded": 1.24888278237034,
+      "p_value": 0.0,
+      "n_tuples": 203
+    },
+    {
+      "variant": "mask",
+      "encoder": "e5",
+      "score_original": 0.007031341083347797,
+      "score_guarded": 0.0054191164672374725,
+      "drop_percent": 22.92911973689526,
+      "null_ci_low": 0.003876822505844757,
+      "null_ci_high": 0.004050189675763249,
+      "null_floor_midpoint": 0.0039635060908040035,
+      "ratio_guarded": 1.3672532205288466,
+      "p_value": 0.0,
+      "n_tuples": 203
+    },
+    {
+      "variant": "deletion",
+      "encoder": "bge",
+      "score_original": 0.021059468388557434,
+      "score_guarded": 0.018071096390485764,
+      "drop_percent": 14.190158758686373,
+      "null_ci_low": 0.014351658127270638,
+      "null_ci_high": 0.014901027246378363,
+      "null_floor_midpoint": 0.0146263426868245,
+      "ratio_guarded": 1.235517092510373,
+      "p_value": 0.0,
+      "n_tuples": 203
+    },
+    {
+      "variant": "deletion",
+      "encoder": "e5",
+      "score_original": 0.007031341083347797,
+      "score_guarded": 0.005337177775800228,
+      "drop_percent": 24.094454919273176,
+      "null_ci_low": 0.0038552291982341556,
+      "null_ci_high": 0.004026763839647174,
+      "null_floor_midpoint": 0.003940996518940665,
+      "ratio_guarded": 1.3542711215677132,
+      "p_value": 0.0,
+      "n_tuples": 203
+    }
+  ],
+  "correlations": [
+    {
+      "variant": "mask",
+      "encoder": "bge",
+      "n_tuples": 203,
+      "pearson_r": 0.9385453238213932,
+      "spearman_rho": 0.9128793203863999
+    },
+    {
+      "variant": "mask",
+      "encoder": "e5",
+      "n_tuples": 203,
+      "pearson_r": 0.9313270238340183,
+      "spearman_rho": 0.8378415210399627
+    },
+    {
+      "variant": "deletion",
+      "encoder": "bge",
+      "n_tuples": 203,
+      "pearson_r": 0.9398795177792416,
+      "spearman_rho": 0.8939954267811598
+    },
+    {
+      "variant": "deletion",
+      "encoder": "e5",
+      "n_tuples": 203,
+      "pearson_r": 0.9276389509319343,
+      "spearman_rho": 0.8337058278415499
+    }
+  ],
+  "largest_pairs": [
+    {
+      "variant": "mask",
+      "encoder": "bge",
+      "largest_pair_original": "branco – indigena",
+      "distance_original": 0.24412491917610168,
+      "largest_pair_guarded": "branco – indigena",
+      "distance_guarded": 0.2196023315191269
+    },
+    {
+      "variant": "mask",
+      "encoder": "e5",
+      "largest_pair_original": "negro/preto – indigena",
+      "distance_original": 0.1380200833082199,
+      "largest_pair_guarded": "negro/preto – branco",
+      "distance_guarded": 0.12069662660360336
+    },
+    {
+      "variant": "deletion",
+      "encoder": "bge",
+      "largest_pair_original": "branco – indigena",
+      "distance_original": 0.24412491917610168,
+      "largest_pair_guarded": "negro/preto – branco",
+      "distance_guarded": 0.2170901745557785
+    },
+    {
+      "variant": "deletion",
+      "encoder": "e5",
+      "largest_pair_original": "negro/preto – indigena",
+      "distance_original": 0.1380200833082199,
+      "largest_pair_guarded": "negro/preto – branco",
+      "distance_guarded": 0.11964287608861923
+    }
+  ],
+  "item5": {
+    "matrix_original": {
+      "groups": [
+        "negro/preto",
+        "branco",
+        "pardo",
+        "indigena",
+        "asiatico/amarelo"
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.22565382719039917,
+          0.2095164805650711,
+          0.23631778359413147,
+          0.22759023308753967
+        ],
+        [
+          0.22565382719039917,
+          0.0,
+          0.1958591341972351,
+          0.24412491917610168,
+          0.20662572979927063
+        ],
+        [
+          0.2095164805650711,
+          0.1958591341972351,
+          0.0,
+          0.23397666215896606,
+          0.20494899153709412
+        ],
+        [
+          0.23631778359413147,
+          0.24412491917610168,
+          0.23397666215896606,
+          0.0,
+          0.23998618125915527
+        ],
+        [
+          0.22759023308753967,
+          0.20662572979927063,
+          0.20494899153709412,
+          0.23998618125915527,
+          0.0
+        ]
+      ]
+    },
+    "matrix_guarded_mask": {
+      "groups": [
+        "negro/preto",
+        "branco",
+        "pardo",
+        "indigena",
+        "asiatico/amarelo"
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.2192322462797165,
+          0.20341648161411285,
+          0.2145238071680069,
+          0.21562863886356354
+        ],
+        [
+          0.2192322462797165,
+          0.0,
+          0.19581495225429535,
+          0.2196023315191269,
+          0.19874711334705353
+        ],
+        [
+          0.20341648161411285,
+          0.19581495225429535,
+          0.0,
+          0.21028774976730347,
+          0.19694297015666962
+        ],
+        [
+          0.2145238071680069,
+          0.2196023315191269,
+          0.21028774976730347,
+          0.0,
+          0.21371892094612122
+        ],
+        [
+          0.21562863886356354,
+          0.19874711334705353,
+          0.19694297015666962,
+          0.21371892094612122,
+          0.0
+        ]
+      ]
+    },
+    "top_two_original": [
+      {
+        "pair": "branco – indigena",
+        "distance": 0.24412491917610168
+      },
+      {
+        "pair": "indigena – asiatico/amarelo",
+        "distance": 0.23998618125915527
+      }
+    ],
+    "top_two_guarded_mask": [
+      {
+        "pair": "branco – indigena",
+        "distance": 0.2196023315191269
+      },
+      {
+        "pair": "negro/preto – branco",
+        "distance": 0.2192322462797165
+      }
+    ],
+    "margin_original": 0.004138737916946411,
+    "margin_guarded_mask": 0.0003700852394104004,
+    "bootstrap_ci95": [
+      {
+        "state": "original",
+        "pair": "branco – indigena",
+        "mean_distance": 0.24412491946972062,
+        "ci95_low": 0.23515454935543056,
+        "ci95_high": 0.2536923103915353,
+        "n_tuples": 203,
+        "bootstrap_iterations": 10000,
+        "seed": 42
+      },
+      {
+        "state": "original",
+        "pair": "indigena – asiatico/amarelo",
+        "mean_distance": 0.23998619968374374,
+        "ci95_low": 0.231977698632649,
+        "ci95_high": 0.24867557772421486,
+        "n_tuples": 203,
+        "bootstrap_iterations": 10000,
+        "seed": 42
+      },
+      {
+        "state": "guarded_mask",
+        "pair": "branco – indigena",
+        "mean_distance": 0.21960233093188902,
+        "ci95_low": 0.21212263096105582,
+        "ci95_high": 0.2275118365259887,
+        "n_tuples": 203,
+        "bootstrap_iterations": 10000,
+        "seed": 42
+      },
+      {
+        "state": "guarded_mask",
+        "pair": "negro/preto – branco",
+        "mean_distance": 0.21923225288614265,
+        "ci95_low": 0.2120699126089882,
+        "ci95_high": 0.2267642019656051,
+        "n_tuples": 203,
+        "bootstrap_iterations": 10000,
+        "seed": 42
+      }
+    ],
+    "per_tuple_file": "pairwise_distances_per_tuple_bge_mask.csv"
+  },
+  "item6": [
+    {
+      "variant": "mask",
+      "encoder": "bge",
+      "score_old_lexicon": 0.018299080431461334,
+      "score_guarded_lexicon": 0.01835527829825878,
+      "score_change": 5.6197866797447205e-05,
+      "score_change_percent": 0.3071076003405453,
+      "ratio_old_lexicon": 1.2465010601962372,
+      "ratio_guarded_lexicon": 1.24888278237034,
+      "ratio_change": 0.0023817221741027073
+    },
+    {
+      "variant": "mask",
+      "encoder": "e5",
+      "score_old_lexicon": 0.005405202973634005,
+      "score_guarded_lexicon": 0.0054191164672374725,
+      "score_change": 1.3913493603467941e-05,
+      "score_change_percent": 0.2574092716098999,
+      "ratio_old_lexicon": 1.36473086955171,
+      "ratio_guarded_lexicon": 1.3672532205288466,
+      "ratio_change": 0.0025223509771366004
+    },
+    {
+      "variant": "deletion",
+      "encoder": "bge",
+      "score_old_lexicon": 0.01806032285094261,
+      "score_guarded_lexicon": 0.018071096390485764,
+      "score_change": 1.0773539543151855e-05,
+      "score_change_percent": 0.05965308390148495,
+      "ratio_old_lexicon": 1.2351248828498473,
+      "ratio_guarded_lexicon": 1.235517092510373,
+      "ratio_change": 0.0003922096605255554
+    },
+    {
+      "variant": "deletion",
+      "encoder": "e5",
+      "score_old_lexicon": 0.005335123278200626,
+      "score_guarded_lexicon": 0.005337177775800228,
+      "score_change": 2.0544975996017456e-06,
+      "score_change_percent": 0.03850890583909178,
+      "ratio_old_lexicon": 1.3538075311726079,
+      "ratio_guarded_lexicon": 1.3542711215677132,
+      "ratio_change": 0.00046359039510535105
+    }
+  ],
+  "item6_historical_confounded": [
+    {
+      "variant": "mask",
+      "encoder": "bge",
+      "score_historical": 0.01829887181520462,
+      "score_guarded_fp32": 0.01835527829825878,
+      "ratio_historical": 1.2465086169896273,
+      "ratio_guarded_fp32": 1.24888278237034,
+      "warning": "Confounded by unknown/historical embedding precision; not used as the lexical-effect estimate."
+    },
+    {
+      "variant": "mask",
+      "encoder": "e5",
+      "score_historical": 0.00540569145232439,
+      "score_guarded_fp32": 0.0054191164672374725,
+      "ratio_historical": 1.364794621351051,
+      "ratio_guarded_fp32": 1.3672532205288466,
+      "warning": "Confounded by unknown/historical embedding precision; not used as the lexical-effect estimate."
+    },
+    {
+      "variant": "deletion",
+      "encoder": "bge",
+      "score_historical": 0.018060123547911644,
+      "score_guarded_fp32": 0.018071096390485764,
+      "ratio_historical": 1.2351195934482955,
+      "ratio_guarded_fp32": 1.235517092510373,
+      "warning": "Confounded by unknown/historical embedding precision; not used as the lexical-effect estimate."
+    },
+    {
+      "variant": "deletion",
+      "encoder": "e5",
+      "score_historical": 0.005334943998605013,
+      "score_guarded_fp32": 0.005337177775800228,
+      "ratio_historical": 1.3537735478817747,
+      "ratio_guarded_fp32": 1.3542711215677132,
+      "warning": "Confounded by unknown/historical embedding precision; not used as the lexical-effect estimate."
+    }
+  ],
+  "item7": {
+    "character_length": {
+      "p10": 1553,
+      "median": 1767,
+      "p90": 1921,
+      "max": 2263
+    },
+    "interpretation": "The narrow distribution compressed near an upper bound is compatible with truncation at 512 tokens.",
+    "generated_token_fields_found": [],
+    "records_with_generated_token_count": 0,
+    "records_exactly_512": null,
+    "percent_exactly_512": null
+  }
+}
